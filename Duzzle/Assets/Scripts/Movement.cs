@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpelerBeweging : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 7f;
@@ -20,7 +20,6 @@ public class SpelerBeweging : MonoBehaviour
 
     void Update()
     {
-        // Horizontale beweging
         if (Input.GetKey(left))
         {
             rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
@@ -34,7 +33,6 @@ public class SpelerBeweging : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
 
-        // Springen
         if (Input.GetKeyDown(up) && standOnGround)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -42,10 +40,18 @@ public class SpelerBeweging : MonoBehaviour
         }
     }
 
-    // Check of de speler de grond raakt (simpele methode)
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
+        {
+            standOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Player1"))
+        {
+            standOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Player2"))
         {
             standOnGround = true;
         }
