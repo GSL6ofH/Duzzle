@@ -11,7 +11,7 @@ public class ToggleObjectOnTrigger : MonoBehaviour
         {
             if (targetObject != null)
             {
-                targetObject.SetActive(true); // Turn on
+                targetObject.SetActive(false); // Turn off
             }
         }
     }
@@ -23,7 +23,7 @@ public class ToggleObjectOnTrigger : MonoBehaviour
         {
             if (targetObject != null)
             {
-                targetObject.SetActive(false); // Turn off again
+                targetObject.SetActive(true); // Turn on
             }
         }
     }
