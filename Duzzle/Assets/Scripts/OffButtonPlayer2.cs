@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class OffButtonPlayer2 : MonoBehaviour
 {
-    [SerializeField] private GameObject targetObject;
+    [SerializeField] private GameObject targetObject;//this makes it so you can choose on what object it has effect
 
     // Triggered when the player enters the area
     private void OnTriggerEnter2D(Collider2D other)
