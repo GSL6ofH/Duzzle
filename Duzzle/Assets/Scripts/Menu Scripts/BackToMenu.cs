@@ -3,17 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.P))//restart button
+        //restart button code(the button is just a text)
+        if (Input.GetKeyDown(KeyCode.P))
         {
             SceneManager.LoadScene("Menu");
         }

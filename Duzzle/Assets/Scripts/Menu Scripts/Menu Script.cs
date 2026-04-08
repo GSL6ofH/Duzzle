@@ -12,7 +12,7 @@ public class MenuScript: MonoBehaviour
     public void QuitGame()
     {
         // turns the game off
-        Debug.Log("De game sluit af..."); // Zichtbaar in de console tijdens testen
+        Debug.Log("the game closes"); //is shown in the console
         Application.Quit();
     }
 }
