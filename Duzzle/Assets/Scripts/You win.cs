@@ -4,14 +4,15 @@ using UnityEngine.SceneManagement;
 public class Youwin : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player1"))
+    {//if the Tag collides with the object with this script the game wil go back to menu
+        
+            if (collision.gameObject.CompareTag("Player1"))
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("YouWin");
         }
         if (collision.gameObject.CompareTag("Player2"))
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("YouWin");
         }
     }
 }
